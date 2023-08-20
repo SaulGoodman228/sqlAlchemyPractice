@@ -8,7 +8,12 @@ user_table=Table("users",meta,
                  Column('name',String(30))
 
 )
+PEQPQPEPQEPEPPQPEQ{ELKLWKGJ
+                   slfkngldkfng
 
+
+df;gkldkfjglkjdflgkjd
+d;fkgjldkfjgl}
 # git init - инициализирует локальный репозиторий
 # git remote add origin https://github.com/SaulGoodman228/sqlAlchemyPractice.git - привязывает локальный репозиторий к облачному
 # --------

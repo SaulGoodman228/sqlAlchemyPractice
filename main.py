@@ -1,19 +1,18 @@
-from sqlalchemy import Table, Column, Integer, create_engine, MetaData, String
-
-engine=create_engine('sqlite+pysqlite:///:memory:',echo=True)
-meta=MetaData()
-
-user_table=Table("users",meta,
-                 Column('id',Integer,primary_key=True),
-                 Column('name',String(30))
-
+from sqlalchemy import (
+    create_engine,
+    Table,
+    MetaData,
 )
-PEQPQPEPQEPEPPQPEQ{ELKLWKGJ
-                   slfkngldkfng
+
+from sqlalchemy.sql import select,and_
+
+# субб+драйвер://юзер:пароль"хост:порт/база
+engine=create_engine('sqlite+pysqlite:///:memory:')
+meta=MetaData()
+conn = engine.connect()
 
 
-df;gkldkfjglkjdflgkjd
-d;fkgjldkfjgl}
+
 # git init - инициализирует локальный репозиторий
 # git remote add origin https://github.com/SaulGoodman228/sqlAlchemyPractice.git - привязывает локальный репозиторий к облачному
 # --------

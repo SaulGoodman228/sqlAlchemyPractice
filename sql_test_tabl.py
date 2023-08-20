@@ -9,32 +9,8 @@ from sqlalchemy import (
     ForeignKey
 )
 
-from sqlalchemy.sql import select, and_
-
-meta = MetaData()
-# hranim dannie
-
-# sozdaem tablici
-authors = Table('Authors', meta,
-                Column('id_author', Integer, primary_key=True),
-                Column('name', String(250), nullable=False))
-
-# столбец в которм указан primary_key является главным
-
-books = Table('Books', meta,
-              Column('id_book', Integer, primary_key=True),
-              Column('title', String(250), nullable=False),
-              Column('author_id', Integer, ForeignKey('Authors.id_author')),
-              Column('genre', String(250)),
-              Column('price', Integer)
-              )
-
-print(books.c)
-# субб+драйвер://юзер:пароль"хост:порт/база
-engine = create_engine('sqlite+pysqlite:///:memory:')
-meta.create_all(engine)  # тут мы записываем данные в нашу мету
-
-conn = engine.connect()
+from main import conn
+from tables import authors, books
 
 spis_avt = ('Pushkin', 'Gogol', 'Welsh', 'Balakirev', 'Oleg')
 # список авторов
